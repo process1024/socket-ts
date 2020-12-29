@@ -3,7 +3,7 @@ interface MessageItem {
     cb: Function;
 }
 
-class Socket {
+export class Socket {
     private socketDomain: string
     private messageArr: MessageItem[]
     private messageAll: Record<string, Function>
@@ -11,10 +11,6 @@ class Socket {
     private isConnectedSocket: Boolean
     private reConnectTimer: number | null
 
-    // private max: number
-    // private pool: NodeWorker[]
-    // private idlePool: NodeWorker[]
-    // private queue: [(worker: NodeWorker) => void, (err: Error) => void][]
     constructor(domain: string) {
         this.socketDomain = domain
         this.messageArr = [] // 单个监听事件数据
