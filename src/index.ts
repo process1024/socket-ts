@@ -3,7 +3,7 @@ interface MessageItem {
     cb: Function;
 }
 
-export class Socket {
+export default class Socket {
     private socketDomain: string
     private messageArr: MessageItem[]
     private messageAll: Record<string, Function>
